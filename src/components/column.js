@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from './card';
 import './../App.css';
+import AddCard from './addCard';
 
 class Column extends Component {
 
@@ -14,6 +15,7 @@ class Column extends Component {
                 {
                     this.props.column.cards.map((card) => <Card name={card.name} key={card.id} /> )
                 }
+                <AddCard />
             </div>
         );
     }

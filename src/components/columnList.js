@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Column from './column'
+import AddColumn from './addColumn';
 
 
 class ColumnList extends Component {
@@ -10,7 +11,12 @@ class ColumnList extends Component {
         const columns = this.props.columns;
 
         return (
-            columns.map((column) => <Column column={column} key={column.id} /> )
+            <div>
+                {
+                    columns.map((column) => <Column column={column} key={column.id} /> )
+                }
+                <AddColumn />
+            </div>
         )
     }
 }
