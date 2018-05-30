@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import './index.css';
 import App from './App';
 
-import columns from './reduxers/columns';
+import columns from './reducers/columns';
 
 const store = createStore(columns, applyMiddleware(thunk));
 
