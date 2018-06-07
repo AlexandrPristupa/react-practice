@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './../App.css';
-import { addCard } from './../actions/actions';
-
+import { addColumn } from './../actions/actions';
+import { store } from '../config/store';
 
 class AddColumn extends Component {
 
@@ -13,7 +13,17 @@ class AddColumn extends Component {
     handleKeyPress(e) {
 
         if(e.key === 'Enter') {
-            console.log(e.target.value)
+
+          let time = new Date();
+          let id = time.getMilliseconds();
+
+          store.dispatch(addColumn({
+            name: e.target.value,
+            id: id,
+            cards: []
+          }));
+
+          e.target.value = '';
         }
     }
 

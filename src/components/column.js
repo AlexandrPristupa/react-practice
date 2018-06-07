@@ -7,15 +7,13 @@ class Column extends Component {
 
     render() {
 
-        console.log(this.props);
-
         return (
             <div className="column">
                 <p>{ this.props.column.name }</p>
                 {
                     this.props.column.cards.map((card) => <Card name={card.name} key={card.id} /> )
                 }
-                <AddCard />
+                <AddCard columnId={this.props.column.id} />
             </div>
         );
     }

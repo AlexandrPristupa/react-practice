@@ -4,15 +4,15 @@ export const columnsMock = [
         name: 'column 1',
         cards: [
             {
-                id: '156654651321',
+                id: 169,
                 name: 'test 1'
             },
             {
-                id: '654444654848',
+                id: 898,
                 name: 'test 2'
             },
             {
-                id: '584654655844',
+                id: 892,
                 name: 'test 3'
             }
         ]
@@ -22,11 +22,11 @@ export const columnsMock = [
         name: 'column 2',
         cards: [
             {
-                id: '545646546544',
+                id: 994,
                 name: 'test 15'
             },
             {
-                id: '564844544548',
+                id: 582,
                 name: 'test 545'
             }
         ]
