@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component, Fragment } from 'react';
 import Column from './column'
 import AddColumn from './addColumn';
 
 class ColumnList extends Component {
-
-
     render() {
 
-        const columns = this.props.columns;
+        console.log(this.props);
 
         return (
-            <div>
+            <Fragment>
                 {
-                    columns.map((column) => <Column column={column} key={column.id} /> )
+                    this.props.columns.map((column) => {
+                        return( 
+                            <Column
+                                column={column}
+                                key={column.id}
+                                onAddCard={this.props.addCard}
+                            />
+                        )
+                    })
                 }
-                <AddColumn />
-            </div>
+                <AddColumn
+                    onAddColumn={this.props.addColumn}
+                />
+            </Fragment>
         )
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        columns: state
-    }
-};
-
-export default connect(mapStateToProps)(ColumnList);
+export default ColumnList;

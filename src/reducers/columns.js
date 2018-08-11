@@ -36,7 +36,6 @@ const columns = (state = columnsMock, action) => {
     case GET_COLUMNS:
       return [...state];
     default:
-      console.log(state);
       return state;
   }
 };

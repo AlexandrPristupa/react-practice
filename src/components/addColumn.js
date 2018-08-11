@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
-import './../App.css';
-import { addColumn } from './../actions/actions';
-import { store } from '../config/store';
+import './../styles/App.css';
 
 class AddColumn extends Component {
 
-    constructor(props) {
-        super(props);
-        this.handleKeyPress = this.handleKeyPress.bind(this);
-    }
-
-    handleKeyPress(e) {
+    handleKeyPress = (e) => {
 
         if(e.key === 'Enter') {
 
           let time = new Date();
           let id = time.getMilliseconds();
 
-          store.dispatch(addColumn({
-            name: e.target.value,
-            id: id,
-            cards: []
-          }));
+            this.props.onAddColumn({
+                name: e.target.value,
+                id: id,
+                cards: []
+              })
 
           e.target.value = '';
         }
     }
 
     render() {
+        console.log(this.props)
 
         return (
             <input type="text" placeholder="add column" className="input" onKeyPress={this.handleKeyPress}/>

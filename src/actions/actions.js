@@ -1,22 +1,22 @@
-import { ADD_COLUMNS, GET_COLUMNS, ADD_CARD } from './actionsTypes';
+import * as actionsTypes from './actionsTypes';
 
-export const addColumn = (value) => {
+export const addColumn = payload => {
   return {
-      type: ADD_COLUMNS,
-      payload: value
+      type: actionsTypes.ADD_COLUMNS,
+      payload: payload
   }
 };
 
-export const getColumns = (value) => {
+export const getColumns = payload => {
     return {
-        type: GET_COLUMNS,
-        payload: value
+        type: actionsTypes.GET_COLUMNS,
+        payload: payload
     }
 };
 
-export const addCard = (value) => {
+export const addCard = payload => {
     return {
-        type: ADD_CARD,
-        payload: value
+        type: actionsTypes.ADD_CARD,
+        payload: payload
     }
 };

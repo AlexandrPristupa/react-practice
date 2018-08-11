@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from './card';
-import './../App.css';
+import './../styles/App.css';
 import AddCard from './addCard';
 
 class Column extends Component {
-
     render() {
+        console.log(this.props);
 
         return (
             <div className="column">
@@ -13,7 +13,7 @@ class Column extends Component {
                 {
                     this.props.column.cards.map((card) => <Card name={card.name} key={card.id} /> )
                 }
-                <AddCard columnId={this.props.column.id} />
+                <AddCard onAddCard={this.props.onAddCard} columnId={this.props.column.id} />
             </div>
         );
     }
