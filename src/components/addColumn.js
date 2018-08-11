@@ -24,7 +24,7 @@ class AddColumn extends Component {
         console.log(this.props)
 
         return (
-            <input type="text" placeholder="add column" className="input" onKeyPress={this.handleKeyPress}/>
+            <input type="text" placeholder="Add column..." className="add-list-input" onKeyPress={this.handleKeyPress}/>
         );
     }
 }

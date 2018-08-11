@@ -1,19 +1,28 @@
 .column {
-    background: aqua;
+    background: #e3e4e6;
     float: left;
-    width: 200px;
+    width: 250px;
     padding: 10px;
-    margin: 5px;
+    margin: 7px;
     border-radius: 5px;
 }
 
+.column h5 {
+    margin: 0 0 10px 0;
+    font-size: 16px
+}
+
 .card {
-    background: aliceblue;
+    background: #fff;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 5px;
 }
 
-.input {
-    width: 195px;
+.add-card-input {
+    width: 100%;
+    background: transparent;
+    padding: 5px;
+    margin-top: 10px;
+    color: #dddee0;
 }

@@ -9,7 +9,7 @@ class Column extends Component {
 
         return (
             <div className="column">
-                <p>{ this.props.column.name }</p>
+                <h5>{ this.props.column.name }</h5>
                 {
                     this.props.column.cards.map((card) => <Card name={card.name} key={card.id} /> )
                 }

@@ -20,7 +20,7 @@ class AddCard extends Component {
         console.log(this.props);
 
         return (
-            <input type="text" placeholder="add card" className="input" onKeyPress={this.handleKeyPress}/>
+            <input type="text" placeholder="Add card..." className="add-card-input" onKeyPress={this.handleKeyPress}/>
         );
     }
 }
