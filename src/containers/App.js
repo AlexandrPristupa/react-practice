@@ -3,6 +3,7 @@ import ColumnList from '../components/columnList';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/actions'
+import '../styles/reset.css';
 import '../styles/App.css';
 
 class App extends Component {

@@ -12,7 +12,7 @@ class Card extends Component {
 
     render() {
         return (
-            <div className="card">
+            <div className="card" style={{ background: this.props.color }}>
                 <p>{this.props.name}</p>
                 <button onClick={this.handleDeleteCard}>x</button>
             </div>

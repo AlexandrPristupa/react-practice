@@ -24,11 +24,15 @@ class Column extends Component {
                                 columnId={this.props.column.id}
                                 name={card.name}
                                 key={card.id}
+                                color={card.color}
                             /> 
                         )
                     }) 
                 }
-                <AddCard onAddCard={this.props.onAddCard} columnId={this.props.column.id} />
+                <AddCard
+                    onAddCard={this.props.onAddCard}
+                    columnId={this.props.column.id}
+                />
             </div>
         );
     }

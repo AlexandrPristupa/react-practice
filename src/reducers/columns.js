@@ -60,11 +60,10 @@ const columns = (state = columnsMock, action) => {
       });
 
     case actionsTypes.GET_COLUMNS:
-
+    
       return [
         ...state
       ];
-      
     default:
       return state;
   }
