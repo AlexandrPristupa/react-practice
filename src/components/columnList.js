@@ -4,18 +4,17 @@ import AddColumn from './addColumn';
 
 class ColumnList extends Component {
     render() {
-
-        console.log(this.props);
-
         return (
             <Fragment>
                 {
                     this.props.columns.map((column) => {
-                        return( 
+                        return (
                             <Column
                                 column={column}
                                 key={column.id}
                                 onAddCard={this.props.addCard}
+                                onDeleteColumn={this.props.deleteColumn}
+                                onDeleteCard={this.props.deleteCard}
                             />
                         )
                     })

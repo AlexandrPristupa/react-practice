@@ -18,9 +18,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-      columns: state.columns
-});
+const mapStateToProps = state => {
+      return {
+        columns: state.columns
+      }
+};
 
 const mapDispatchToProps = dispatch => ({
   ...bindActionCreators(actions, dispatch),

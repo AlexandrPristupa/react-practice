@@ -3,11 +3,18 @@ import './../styles/App.css';
 
 
 class Card extends Component {
-    render() {
+    handleDeleteCard = () => {
+        this.props.onDeleteCard({
+            cardId: this.props.cardId, 
+            columnId: this.props.columnId
+        })
+    }
 
+    render() {
         return (
             <div className="card">
                 <p>{this.props.name}</p>
+                <button onClick={this.handleDeleteCard}>x</button>
             </div>
         );
     }

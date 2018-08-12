@@ -1,10 +1,10 @@
-import {GET_COLUMNS, ADD_COLUMNS, ADD_CARD} from './../actions/actionsTypes';
-import {columnsMock} from '../config/constans';
+import * as actionsTypes from './../actions/actionsTypes';
+import { columnsMock } from '../config/constans';
 
 const columns = (state = columnsMock, action) => {
   switch (action.type) {
 
-    case ADD_COLUMNS:
+    case actionsTypes.ADD_COLUMN:
 
       return [
         ...state,
@@ -15,7 +15,17 @@ const columns = (state = columnsMock, action) => {
         }
       ];
 
-    case ADD_CARD:
+    case actionsTypes.DELETE_COLUMN:
+
+      return state.filter((column) => {
+        if (column.id !== action.payload) {
+          return [
+            ...columns
+          ];
+        }
+      });
+
+    case actionsTypes.ADD_CARD:
 
       return state.map((column) => {
         if (column.id === action.payload.columnId) {
@@ -33,8 +43,28 @@ const columns = (state = columnsMock, action) => {
         return column;
       });
 
-    case GET_COLUMNS:
-      return [...state];
+    case actionsTypes.DELETE_CARD:
+
+      return state.map((column) => {
+        if(column.id === action.payload.columnId) {
+          return {
+            ...column,
+              cards: column.cards.filter((card) => card.id !== action.payload.cardId),
+              id: column.id,
+              name: column.name
+            }
+        }
+        return {
+          ...column
+        }
+      });
+
+    case actionsTypes.GET_COLUMNS:
+
+      return [
+        ...state
+      ];
+      
     default:
       return state;
   }
