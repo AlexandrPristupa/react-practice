@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './../styles/App.css';
 
 class AddCard extends Component {
@@ -14,15 +15,17 @@ class AddCard extends Component {
           });
           e.target.value = '';
         }
-    }
+    };
 
     render() {
-        console.log(this.props);
-
         return (
             <input type="text" placeholder="Add card..." className="add-card-input" onKeyPress={this.handleKeyPress}/>
         );
     }
 }
+
+AddCard.propTypes = {
+  onAddCard: PropTypes.func.isRequired
+};
 
 export default AddCard;
