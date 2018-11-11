@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './../styles/App.css';
 
 class AddColumn extends Component {
@@ -14,19 +15,21 @@ class AddColumn extends Component {
                 name: e.target.value,
                 id: id,
                 cards: []
-              })
+              });
 
           e.target.value = '';
         }
-    }
+    };
 
     render() {
-        console.log(this.props)
-
         return (
             <input type="text" placeholder="Add column..." className="add-list-input" onKeyPress={this.handleKeyPress}/>
         );
     }
 }
+
+AddColumn.propTypes = {
+  onAddColumn: PropTypes.func.isRequired
+};
 
 export default AddColumn;

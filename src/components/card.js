@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './../styles/App.css';
 
 
@@ -8,7 +9,7 @@ class Card extends Component {
             cardId: this.props.cardId, 
             columnId: this.props.columnId
         })
-    }
+    };
 
     render() {
         return (
@@ -19,5 +20,10 @@ class Card extends Component {
         );
     }
 }
+
+Card.propTypes = {
+    name: PropTypes.string.isRequired,
+    onDeleteCard: PropTypes.func.isRequired
+};
 
 export default Card;

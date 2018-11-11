@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from './card';
 import './../styles/App.css';
 import AddCard from './addCard';
@@ -37,5 +38,11 @@ class Column extends Component {
         );
     }
 }
+
+Column.propTypes = {
+  column: PropTypes.object.isRequired,
+  onDeleteCard: PropTypes.func.isRequired,
+  onAddCard: PropTypes.func.isRequired
+};
 
 export default Column;

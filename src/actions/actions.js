@@ -12,7 +12,7 @@ export const deleteColumn = payload => {
         type: types.DELETE_COLUMN,
         payload: payload
     }
-}
+};
 
 export const addCard = payload => {
     return {
@@ -26,7 +26,7 @@ export const deleteCard = payload => {
         type: types.DELETE_CARD,
         payload: payload
     }
-}
+};
 
 export const getColumns = payload => {
     return {
