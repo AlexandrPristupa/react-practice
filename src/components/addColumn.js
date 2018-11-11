@@ -23,7 +23,12 @@ class AddColumn extends Component {
 
     render() {
         return (
-            <input type="text" placeholder="Add column..." className="add-list-input" onKeyPress={this.handleKeyPress}/>
+            <input
+                type="text"
+                placeholder="Add column..."
+                className="add-list-input"
+                onKeyPress={this.handleKeyPress}
+            />
         );
     }
 }

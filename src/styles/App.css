@@ -3,7 +3,6 @@
     float: left;
     width: 250px;
     padding: 10px;
-    margin: 7px;
     border-radius: 5px;
 }
 
@@ -32,6 +31,19 @@
     margin-top: 10px;
 }
 
-.add-card-input:focus {
+.add-card-input:focus,
+.add-card-input:active {
     outline: none;
+    border: none;
+}
+
+.add-list-input {
+    background: #0d6aa9;
+    border: none;
+    padding: 10px;
+    color: #62aed2;
+}
+
+.add-list-input::placeholder {
+    color: #62aed2;
 }
